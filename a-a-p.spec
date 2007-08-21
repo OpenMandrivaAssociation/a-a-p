@@ -1,12 +1,9 @@
-%define name a-a-p
-%define version 1.089
-%define release %mkrel 1
 
 Summary: Open Source software construction tool
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://ovh.dl.sourceforge.net/sourceforge/a-a-p/aap-%{version}.tar.bz2
+Name: a-a-p
+Version: 1.090
+Release: %mkrel 1
+Source0: http://belnet.dl.sourceforge.net/sourceforge/a-a-p/aap-%{version}.zip
 License: GPL
 Group: Development/Other
 BuildRoot: %{_tmppath}/%{name}-buildroot
