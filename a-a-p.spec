@@ -6,6 +6,7 @@ Release: %mkrel 1
 Source0: http://belnet.dl.sourceforge.net/sourceforge/a-a-p/aap-%{version}.zip
 License: GPL
 Group: Development/Other
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 BuildRequires: python-devel
 Requires: python
