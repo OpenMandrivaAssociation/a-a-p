@@ -1,17 +1,16 @@
-
-Summary: Construction tool
-Name: a-a-p
-Version: 1.090
-Release: %mkrel 5
-Source0: http://belnet.dl.sourceforge.net/sourceforge/a-a-p/aap-%{version}.zip
-License: GPL
-Group: Development/Other
-BuildRoot: %{_tmppath}/%{name}-buildroot
-BuildArchitectures: noarch
-BuildRequires: python-devel
-Requires: python
-Url: http://www.a-a-p.org/
-Provides: aap = %{version}-%{release}
+Summary:	Construction tool
+Name:		a-a-p
+Version:	1.091
+Release:	%mkrel 1
+Source0:	http://belnet.dl.sourceforge.net/sourceforge/%{name}/aap-%{version}.zip
+License:	GPLv2
+Group:		Development/Other
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildArch:	noarch
+BuildRequires:	python-devel
+Requires:	python
+Url:		http://www.a-a-p.org/
+Provides:	aap = %{version}-%{release}
 
 %description
 A-A-P is an Open Source software construction tool--that is, a build
@@ -31,7 +30,7 @@ all overloadable also.
 %setup -q -n aap-%{version} -c aap-%{version}
 
 %build
-# nothing to do !
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -56,14 +55,9 @@ mv $RPM_BUILD_ROOT/%{_prefix}/lib/aap/Exec-%{version}/doc $RPM_BUILD_ROOT/%{_doc
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(-,root,root,755)
 %{_bindir}/*
 %{_prefix}/lib/aap
 %{_mandir}/man*/*
 %{_docdir}/aap-%{version}
-
-
-
-
