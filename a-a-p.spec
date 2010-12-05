@@ -1,7 +1,7 @@
 Summary:	Construction tool
 Name:		a-a-p
 Version:	1.091
-Release:	%mkrel 1
+Release:	%mkrel 2
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/%{name}/aap-%{version}.zip
 License:	GPLv2
 Group:		Development/Other
