@@ -7,8 +7,8 @@ License:	GPLv2
 Group:		Development/Other
 
 BuildArch:	noarch
-BuildRequires:	python-devel
-Requires:	python
+BuildRequires:	python2-devel
+Requires:	python2
 Url:		http://www.a-a-p.org/
 Provides:	aap = %{version}-%{release}
 
@@ -28,13 +28,16 @@ all overloadable also.
 
 %prep
 %setup -q -n aap-%{version} -c aap-%{version}
-find . -name "*.py" |xargs 2to3 -w
+
 
 %build
 
 
 %install
-export PYTHONOPTIMIZE=1
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
+
+export PYTHON2OPTIMIZE=1
 mkdir -p %{buildroot}/%{_prefix}
 ./aap PREFIX=%{buildroot}/%{_prefix} install
 
