@@ -5,7 +5,7 @@ Release:	3
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/%{name}/aap-%{version}.zip
 License:	GPLv2
 Group:		Development/Other
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+
 BuildArch:	noarch
 BuildRequires:	python-devel
 Requires:	python
@@ -28,6 +28,7 @@ all overloadable also.
 
 %prep
 %setup -q -n aap-%{version} -c aap-%{version}
+find . -name "*.py" |xargs 2to3 -w
 
 %build
 
