@@ -54,7 +54,6 @@ mv %{buildroot}/%{_prefix}/lib/aap/Exec-%{version}/doc %{buildroot}/%{_docdir}/a
 
 
 %files
-%defattr(-,root,root,755)
 %{_bindir}/*
 %{_prefix}/lib/aap
 %{_mandir}/man*/*
