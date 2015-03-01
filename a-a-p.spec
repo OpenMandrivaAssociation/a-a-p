@@ -28,7 +28,7 @@ all overloadable also.
 
 %prep
 %setup -q -n aap-%{version} -c aap-%{version}
-
+find . -name "*.py" |xargs 2to3 -w
 
 %build
 
