@@ -9,7 +9,7 @@ Group:		Development/Other
 BuildArch:	noarch
 BuildRequires:	python2-devel
 Requires:	python2
-Url:		http://www.a-a-p.org/
+Url:		https://www.a-a-p.org/
 Provides:	aap = %{version}-%{release}
 
 %description
